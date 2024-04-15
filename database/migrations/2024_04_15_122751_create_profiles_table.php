@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->unsignedBigInteger('user_id');
             $table->string('first_name', 255);
             $table->string('last_name', 255);
-            $table->string('avatar', 500);
+            $table->string('avatar', 500)->nullable();
             $table->bigInteger('balance')->default(0);
             $table->timestamps();
         });
