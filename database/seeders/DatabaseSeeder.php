@@ -13,9 +13,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-        //Profile::factory(50)->create();
-        //Profile::factory(50)->withSocialMedia()->create();
         Profile::factory()->count(10)->withSocialMedia()->create();
         $this->call([
             CreateDefaultAdminSeeder::class
