@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Profile extends Model
@@ -24,8 +25,8 @@ class Profile extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function socialMedia(): HasOne
+    public function socialMedia(): HasMany
     {
-        return $this->hasOne(SocialMedia::class);
+        return $this->hasMany(SocialMedia::class);
     }
 }
